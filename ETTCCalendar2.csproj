@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <SignAssembly>false</SignAssembly>
+    <Authors>David Malenke</Authors>
+    <Company></Company>
+    <Description>Estimated time to complete program
+Icon made by Becris from www.flaticon.com</Description>
+    <ApplicationIcon>calendar.ico</ApplicationIcon>
+    <Version>2.1.0</Version>
+    <Product>ETTC Calendar 2</Product>
+    <PackageId>ETTC Calendar 2</PackageId>
+    <PackageIcon></PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="calendar.png" />
+    <None Remove="calendar.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PublicHoliday" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+</Project>
